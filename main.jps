@@ -1,16 +1,18 @@
 type: install
 name: Zabbix Server
-baseUrl: https://raw.githubusercontent.com/panslothda/Jelastic-Zabbix-Server/master
+baseUrl: https://raw.githubusercontent.com/dchenaux/Jelastic-Zabbix-Server/master
 logo: images/zabbix.svg
 homepage: https://zabbix.com
 description: |
   Zabbix Server for monitoring of nodes and other servers  
-  This JPS is based on the LLSMP Stack and installs Zabbix 5  
+  This JPS is based on the LLSMP Stack and installs Zabbix 6  
 
 categories:
 - apps/dev-and-admin-tools
 
 skipNodeEmails: true
+
+engine: php7.4
 
 nodes:
   nodeType: llsmp
@@ -51,7 +53,7 @@ addons:
     actions:
       update:
         - log: launching zabbix install JPS
-        - install: https://raw.githubusercontent.com/panslothda/Jelastic-Zabbix-Server/master/scripts/update-zabbix.jps
+        - install: https://raw.githubusercontent.com/dchenaux/Jelastic-Zabbix-Server/master/scripts/update-zabbix.jps
           skipEmail: true
 
 actions:
